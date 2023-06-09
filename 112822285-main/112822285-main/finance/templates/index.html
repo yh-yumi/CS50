@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class = "table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th class = "text-end">Price</th>
+                <th class = "text-end">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for stock in stocks %}
+            <tr>
+                <!--The symbol of each row, use . to access dictionary's value-->
+                <td>{{stock.symbol}}</td>
+                <td>{{stock.symbolname}}</td>
+                <td>{{stock.SUMshares}}</td>
+                <td class="text-end">{{stock.currentprice | usd}}</td>
+                <td class = "text-end">{{(stock.SUMshares * stock.currentprice) | usd}}</td>
+
+                <form action = "/" method = "post">
+                <input name = "symbol" type = hidden value = "{{stock.symbol}}">
+                <input name = "user_shares" type = "hidden" value = "{{stock.SUMshares}}">
+                <td><input autocomplete="off" class="form-control mx-auto w-auto" min="0" name="shares" placeholder="Shares" type="number"></td>
+                <td><button id = "Sell" type = "submit">Sell</button></td>
+                </form>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                <td id="cash" class="border-0 text-end">{{cash | usd}}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">Total</td>
+                <td id = "sum" class="border-0 text-end">{{sum | usd}}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

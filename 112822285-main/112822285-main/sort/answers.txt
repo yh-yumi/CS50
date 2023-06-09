@@ -1,0 +1,6 @@
+sort1 uses:Bubblesort
+How do you know?:Running random50000.txt(the worst case), it takes 8.83 seconds (O(n square)) to sort. That is much longer than running the same text with sort2. It should be bubblesort because when in the worst case, it takes longer time than mergesort. And in the best case(run sorted50000.txt), the time gap between sort1 and sort2 are not as much as running the random array. Bubblesort in the best case takes Ω(n) to finish. If it is a selectionsort, it will take Θ(n square) for no matter the worst case or the best case.
+sort2 uses:Mergesort
+How do you know?:No matter in the worst case or in the best case, mergesort takes almost time to sort Θ(nlogn). And it has been the fastest sort among the three sorts, so it should be mergesort.
+sort3 uses:Selectionsort
+How do you know?:Running sorted50000.txt, it takes 3.703 seconds to sort a sorted array. That is much longer compared with sort1 and sort2 using the the same array. If sort3 is bubblesort or mergesort, in the best case(an assorted array), it will take Ω(n) and Ω(nlogn) to finish. But it takes the longest, so it must be selectionsort, which doesn't benefit from the sorted scenario. It still has to go through the sorted process.

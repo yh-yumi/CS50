@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Spells</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Introdution</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Spells</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="creatures.html">Creatures</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="spell_header"><h1>Spells</h1></div>
+
+      <div class="alert alert-warning" role="alert">
+        Click the spell cardS to see what will happen!
+      </div>
+        <div><img class="img" src="spell2.jpg">
+          <div class="spell_card">Accio<p>
+            Summons an object towards the caster. It is able to summon objects in direct line of sight of the caster, as
+            well as things out of view, by calling the object aloud after the incantation (unless the spell is casted nonverbally).
+            This spell needs thought behind it, and the object must be clear in the casters mind before trying to summon it.
+             </p>
+          </div>
+          <div class="spell_card">Alohomora
+            <p>Unlocks doors and other locked objects. It can also unlock doors that have been sealed with a Locking Spell, although
+              it is possible to bewitch doors to become unaffected by this spell.
+            </p>
+          </div>
+
+          <div class="spell_card">Ascendio
+            <p>Lifts the caster high into the air. The charm also works underwater, propelling the caster above the surface.
+            </p>
+          </div>
+
+          <div class="curse_spell">Avada-Kedavra
+            <p>
+            Causes instantaneous death. It is accompanied by a flash of green light and a rushing noise.
+            There is no known Counter-curse that can protect the victim from dying, except for a loving sacrifice.
+            It is one of the three Unforgivable Curses.
+          </p>
+          </div>
+
+          <div class="protective_spells">Expecto Patronum
+            <p>
+              The Patronus Charm (Expecto Patronum) was the most famous and one of the most powerful defensive
+              charms known to wizardkind. It was an immensely complicated and extremely difficult spell, that
+              channelled the caster's positive emotions into a powerful protection and evoked a partially-tangible
+              positive energy force known as a Patronus (pl. Patronuses) or spirit guardian. It was the primary
+              protection against Dementors and Lethifolds, against which there were no other defences.
+          </p>
+          </div>
+          <div class="spell_card">Wingardium Leviosa
+            <p>The Levitation Charm is one of the first spells learnt by any young witch or wizard. With the
+              charm a witch or wizard can make things fly with the flick of a wand. The charm is an excellent
+              test of your magical skills, wand control and above all, patience.
+            </p>
+          </div>
+          <div class="spell_card">Expelliarmus
+            <p>The Disarming Charm, as the name implies, enables the user to disarm another wizard or witch
+              in a duel by forcing their wand out of their hand. With enough power behind it, the spell could
+              also knock an opponent off their feet and send them flying.
+            </p>
+          </div>
+
+          <div class="curse_spell">Crucio
+            <p>
+              The Cruciatus Curse (Crucio), also known as the Torture Curse, was a tool of the Dark Arts
+              and one of the three Unforgivable Curses. When cast successfully on a fellow human being or living
+              creature, the curse inflicted intense, excruciating physical pain on the victim, and would result in
+              insanity if the victim was subjected to it for a prolonged time. The penalty for the use of this curse
+              on another human being was a life sentence in Azkaban, unless there was sufficient enough evidence
+              that the caster did so under the influence of the Imperius Curse.
+          </p>
+          </div>
+
+
+      </div>
+        <script>
+
+          let curse = document.querySelectorAll('.curse_spell');
+          for (let i = 0; i < curse.length; i++)
+          {
+            curse[i].addEventListener('click', function() {
+              curse[i].style.backgroundColor = "#2F4F4F";
+            });
+          }
+          let protectivespell = document.querySelectorAll('.protective_spells');
+          for (let i = 0; i < protectivespell.length; i++)
+          {
+            protectivespell[i].addEventListener('click', function() {
+              protectivespell[i].style.backgroundColor = 'gold';
+            });
+          }
+
+        </script>
+    </body>
+</html>

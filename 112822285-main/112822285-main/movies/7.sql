@@ -1,0 +1,6 @@
+SELECT title, rating
+FROM movies, ratings
+WHERE movies.id = ratings. movie_id -- REMEMBER TO LINK THE INDEX INDIFFERENT TABLE THAT IS THE SAME
+AND year = 2010
+AND rating IS NOT NULL
+ORDER BY rating DESC, title; --USE COMMA TO SORT BY RATING FIRST AND ALPHABET SECOND

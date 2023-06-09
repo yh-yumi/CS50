@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <!--Action links to the original page not the page you wnt to open upthe next, by the html implementation in app.py makes the page link to the next page(POST)-->
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="symbol" placeholder="Symbol" type="text">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Quote</button>
+    </form>
+
+{% endblock %}
